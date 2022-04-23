@@ -1,0 +1,1038 @@
+Library {
+  Name			  "ArbolFallosLIB__"
+  Version		  6.0
+  SavedCharacterEncoding  "windows-1252"
+  LibraryType		  "BlockLibrary"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  Created		  "Mon Nov 27 16:34:46 2017"
+  Creator		  "Luis"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "Luis"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Tue Mar 19 21:22:29 2019"
+  ModelVersionFormat	  "1.%<AutoIncrement:9>"
+  ConfigurationManager	  "none"
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  RecordCoverage	  off
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dwe"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  off
+  CovForceBlockReductionOff on
+  covSaveCumulativeToWorkspaceVar off
+  CovSaveSingleToWorkspaceVar off
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  on
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    Orientation		    "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SampleTime	      "inf"
+  OutDataTypeMode   "Inherit from 'Constant value'"
+  OutDataType   "fixdt(1,16,0)"
+  ConRadixGroup   "Use specified scaling"
+  OutScaling   "[]"
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchInput off
+      LatchByCopyingInsideSignal off
+      Interpolate	      on
+  DataType   "auto"
+  OutDataType   "fixdt(1,16,0)"
+  OutScaling   "[]"
+  UseBusObject   off
+  BusObject   "BusObject"
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+  DataType   "auto"
+  OutDataType   "fixdt(1,16,0)"
+  OutScaling   "[]"
+  UseBusObject   off
+  BusObject   "BusObject"
+    }
+    Block {
+      BlockType		      Product
+      Inputs		      "2"
+      InputSameDT	      on
+      LockScale		      off
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+  OutDataTypeMode   "Same as first input"
+  OutDataType   "fixdt(1,16,0)"
+  OutScaling   "[]"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "on"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      InputSameDT	      on
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+  OutDataTypeMode   "Same as first input"
+  OutDataType   "fixdt(1,16,0)"
+  OutScaling   "[]"
+    }
+  }
+  System {
+    Name		    "ArbolFallosLIB__"
+    Location		    [48, 83, 922, 739]
+    Open		    off
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "80"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      SubSystem
+      Name		      "FuncionAND_2e"
+      Ports		      [2, 1]
+      Position		      [330, 49, 380, 116]
+      BackgroundColor	      "lightBlue"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      MaskDisplay	      "port_label('input',1,'S_1','texmode','on');\nport_label('input',2,'S_2','texmode','on');\npor"
+      "t_label('output',1,'\\lambda','texmode','on');\nfprintf('AND');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"FuncionAND_2e"
+	Location		[48, 52, 922, 971]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "S1"
+	  Position		  [20, 38, 50, 52]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "S2"
+	  Position		  [20, 68, 50, 82]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Divide"
+	  Ports			  [2, 1]
+	  Position		  [110, 29, 130, 91]
+	  ShowName		  off
+	  Inputs		  "**"
+	  InputSameDT		  off
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+  OutDataTypeMode   "Inherit via internal rule"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "AND"
+	  Position		  [185, 53, 215, 67]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Divide"
+	  SrcPort		  1
+	  DstBlock		  "AND"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "S1"
+	  SrcPort		  1
+	  DstBlock		  "Divide"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "S2"
+	  SrcPort		  1
+	  DstBlock		  "Divide"
+	  DstPort		  2
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "FuncionAND_3e"
+      Ports		      [3, 1]
+      Position		      [330, 136, 380, 224]
+      BackgroundColor	      "lightBlue"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      MaskDisplay	      "port_label('input',1,'S_1','texmode','on');\nport_label('input',2,'S_2','texmode','on');\npor"
+      "t_label('input',3,'S_3','texmode','on');\nport_label('output',1,'\\lambda','texmode','on');\nfprintf('AND');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"FuncionAND_3e"
+	Location		[16, 52, 1454, 980]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "S1"
+	  Position		  [20, 33, 50, 47]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "S2"
+	  Position		  [20, 63, 50, 77]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "S3"
+	  Position		  [20, 93, 50, 107]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Divide"
+	  Ports			  [3, 1]
+	  Position		  [135, 21, 155, 119]
+	  ShowName		  off
+	  Inputs		  "***"
+	  InputSameDT		  off
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+  OutDataTypeMode   "Inherit via internal rule"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "AND"
+	  Position		  [190, 63, 220, 77]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "S1"
+	  SrcPort		  1
+	  DstBlock		  "Divide"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "S2"
+	  SrcPort		  1
+	  DstBlock		  "Divide"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "S3"
+	  SrcPort		  1
+	  DstBlock		  "Divide"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Divide"
+	  SrcPort		  1
+	  DstBlock		  "AND"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "FuncionAND_4e"
+      Ports		      [4, 1]
+      Position		      [330, 251, 380, 369]
+      BackgroundColor	      "lightBlue"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      MaskDisplay	      "port_label('input',1,'S_1','texmode','on');\nport_label('input',2,'S_2','texmode','on');\npor"
+      "t_label('input',3,'S_3','texmode','on');\nport_label('input',4,'S_4','texmode','on');\nport_label('output',1,'\\"
+      "lambda','texmode','on');\nfprintf('AND');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"FuncionAND_4e"
+	Location		[16, 52, 1454, 980]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "S1"
+	  Position		  [20, 33, 50, 47]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "S2"
+	  Position		  [20, 68, 50, 82]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "S3"
+	  Position		  [20, 103, 50, 117]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "S4"
+	  Position		  [20, 138, 50, 152]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Divide"
+	  Ports			  [4, 1]
+	  Position		  [130, 25, 150, 160]
+	  ShowName		  off
+	  Inputs		  "****"
+	  InputSameDT		  off
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+  OutDataTypeMode   "Inherit via internal rule"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "AND"
+	  Position		  [190, 88, 220, 102]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "S1"
+	  SrcPort		  1
+	  DstBlock		  "Divide"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "S2"
+	  SrcPort		  1
+	  DstBlock		  "Divide"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "S3"
+	  SrcPort		  1
+	  DstBlock		  "Divide"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Divide"
+	  SrcPort		  1
+	  DstBlock		  "AND"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "S4"
+	  SrcPort		  1
+	  DstBlock		  "Divide"
+	  DstPort		  4
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "FuncionAND_5e"
+      Ports		      [5, 1]
+      Position		      [330, 408, 380, 552]
+      BackgroundColor	      "lightBlue"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      MaskDisplay	      "port_label('input',1,'S_1','texmode','on');\nport_label('input',2,'S_2','texmode','on');\npor"
+      "t_label('input',3,'S_3','texmode','on');\nport_label('input',4,'S_4','texmode','on');\nport_label('input',5,'S_5"
+      "','texmode','on');\nport_label('output',1,'\\lambda','texmode','on');\nfprintf('AND');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"FuncionAND_5e"
+	Location		[16, 52, 1454, 980]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "S1"
+	  Position		  [20, 33, 50, 47]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "S2"
+	  Position		  [20, 68, 50, 82]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "S3"
+	  Position		  [20, 103, 50, 117]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "S4"
+	  Position		  [20, 138, 50, 152]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "S5"
+	  Position		  [20, 173, 50, 187]
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Divide"
+	  Ports			  [5, 1]
+	  Position		  [125, 17, 145, 203]
+	  ShowName		  off
+	  Inputs		  "*****"
+	  InputSameDT		  off
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+  OutDataTypeMode   "Inherit via internal rule"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "AND"
+	  Position		  [190, 103, 220, 117]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "S1"
+	  SrcPort		  1
+	  DstBlock		  "Divide"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "S2"
+	  SrcPort		  1
+	  DstBlock		  "Divide"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "S3"
+	  SrcPort		  1
+	  DstBlock		  "Divide"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Divide"
+	  SrcPort		  1
+	  DstBlock		  "AND"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "S4"
+	  SrcPort		  1
+	  DstBlock		  "Divide"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "S5"
+	  SrcPort		  1
+	  DstBlock		  "Divide"
+	  DstPort		  5
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "FuncionOR_2e"
+      Ports		      [2, 1]
+      Position		      [220, 49, 270, 116]
+      BackgroundColor	      "magenta"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      MaskDisplay	      "port_label('input',1,'S_1','texmode','on');\nport_label('input',2,'S_2','texmode','on');\npor"
+      "t_label('output',1,'\\lambda','texmode','on');\nfprintf('OR');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"FuncionOR_2e"
+	Location		[16, 52, 1454, 980]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "S1"
+	  Position		  [20, 33, 50, 47]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "S2"
+	  Position		  [20, 68, 50, 82]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add"
+	  Ports			  [2, 1]
+	  Position		  [110, 23, 125, 92]
+	  ShowName		  off
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+  OutDataTypeMode   "Inherit via internal rule"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "OR"
+	  Position		  [185, 53, 215, 67]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Add"
+	  SrcPort		  1
+	  DstBlock		  "OR"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "S1"
+	  SrcPort		  1
+	  DstBlock		  "Add"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "S2"
+	  SrcPort		  1
+	  DstBlock		  "Add"
+	  DstPort		  2
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "FuncionOR_3e"
+      Ports		      [3, 1]
+      Position		      [220, 136, 270, 224]
+      BackgroundColor	      "magenta"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      MaskDisplay	      "port_label('input',1,'S_1','texmode','on');\nport_label('input',2,'S_2','texmode','on');\npor"
+      "t_label('input',3,'S_3','texmode','on');\nport_label('output',1,'\\lambda','texmode','on');\nfprintf('OR');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"FuncionOR_3e"
+	Location		[16, 52, 1454, 980]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "S1"
+	  Position		  [20, 33, 50, 47]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "S2"
+	  Position		  [20, 68, 50, 82]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "S3"
+	  Position		  [20, 103, 50, 117]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add"
+	  Ports			  [3, 1]
+	  Position		  [130, 22, 145, 128]
+	  ShowName		  off
+	  Inputs		  "+++"
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+  OutDataTypeMode   "Inherit via internal rule"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "OR"
+	  Position		  [190, 68, 220, 82]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "S1"
+	  SrcPort		  1
+	  DstBlock		  "Add"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "S2"
+	  SrcPort		  1
+	  DstBlock		  "Add"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "S3"
+	  SrcPort		  1
+	  DstBlock		  "Add"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Add"
+	  SrcPort		  1
+	  DstBlock		  "OR"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "FuncionOR_4e"
+      Ports		      [4, 1]
+      Position		      [220, 251, 270, 369]
+      BackgroundColor	      "magenta"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      MaskDisplay	      "port_label('input',1,'S_1','texmode','on');\nport_label('input',2,'S_2','texmode','on');\npor"
+      "t_label('input',3,'S_3','texmode','on');\nport_label('input',4,'S_4','texmode','on');\nport_label('output',1,'\\"
+      "lambda','texmode','on');\nfprintf('OR');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"FuncionOR_4e"
+	Location		[16, 52, 1454, 980]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "S1"
+	  Position		  [20, 33, 50, 47]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "S2"
+	  Position		  [20, 68, 50, 82]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "S3"
+	  Position		  [20, 103, 50, 117]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "S4"
+	  Position		  [20, 138, 50, 152]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add"
+	  Ports			  [4, 1]
+	  Position		  [130, 26, 145, 159]
+	  ShowName		  off
+	  Inputs		  "++++"
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+  OutDataTypeMode   "Inherit via internal rule"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "OR"
+	  Position		  [190, 88, 220, 102]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "S1"
+	  SrcPort		  1
+	  DstBlock		  "Add"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "S2"
+	  SrcPort		  1
+	  DstBlock		  "Add"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "S3"
+	  SrcPort		  1
+	  DstBlock		  "Add"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Add"
+	  SrcPort		  1
+	  DstBlock		  "OR"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "S4"
+	  SrcPort		  1
+	  DstBlock		  "Add"
+	  DstPort		  4
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "FuncionOR_5e"
+      Ports		      [5, 1]
+      Position		      [220, 407, 270, 553]
+      BackgroundColor	      "magenta"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      MaskDisplay	      "port_label('input',1,'S_1','texmode','on');\nport_label('input',2,'S_2','texmode','on');\npor"
+      "t_label('input',3,'S_3','texmode','on');\nport_label('input',4,'S_4','texmode','on');\nport_label('input',5,'S_5"
+      "','texmode','on');\nport_label('output',1,'\\lambda','texmode','on');\nfprintf('OR');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"FuncionOR_5e"
+	Location		[16, 52, 1454, 980]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "S1"
+	  Position		  [20, 33, 50, 47]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "S2"
+	  Position		  [20, 68, 50, 82]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "S3"
+	  Position		  [20, 103, 50, 117]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "S4"
+	  Position		  [20, 138, 50, 152]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "S5"
+	  Position		  [20, 173, 50, 187]
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add"
+	  Ports			  [5, 1]
+	  Position		  [130, 22, 140, 198]
+	  ShowName		  off
+	  Inputs		  "+++++"
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+  OutDataTypeMode   "Inherit via internal rule"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "OR"
+	  Position		  [190, 103, 220, 117]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "S1"
+	  SrcPort		  1
+	  DstBlock		  "Add"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "S2"
+	  SrcPort		  1
+	  DstBlock		  "Add"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "S3"
+	  SrcPort		  1
+	  DstBlock		  "Add"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Add"
+	  SrcPort		  1
+	  DstBlock		  "OR"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "S4"
+	  SrcPort		  1
+	  DstBlock		  "Add"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "S5"
+	  SrcPort		  1
+	  DstBlock		  "Add"
+	  DstPort		  5
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Sistema"
+      Ports		      [0, 1]
+      Position		      [85, 51, 160, 79]
+      BackgroundColor	      "yellow"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      MaskPromptString	      "Nombre del sistema|Probabilidad de fallo"
+      MaskStyleString	      "edit,edit"
+      MaskVariables	      "sistema=@1;lambda=@2;"
+      MaskTunableValueString  "on,on"
+      MaskCallbackString      "|"
+      MaskEnableString	      "on,on"
+      MaskVisibilityString    "on,on"
+      MaskToolTipString	      "on,on"
+      MaskDisplay	      "fprintf('%s\\n(%3.1e)',sistema,lambda);\nport_label('output',1,'\\lambda','texmode','on');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "'Sistema'|1e-3"
+      System {
+	Name			"Sistema"
+	Location		[126, 52, 1276, 1016]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Constant
+	  Name			  "Databus 4"
+	  Position		  [20, 24, 65, 46]
+	  ShowName		  off
+	  Value			  "lambda"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "lambda"
+	  Position		  [155, 28, 185, 42]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Databus 4"
+	  SrcPort		  1
+	  DstBlock		  "lambda"
+	  DstPort		  1
+	}
+      }
+    }
+  }
+}
