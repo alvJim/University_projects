@@ -1,6 +1,6 @@
 # Aerodynamics 02
 
-In this paper an aerodynamic study of the CRM in transonic flow will be carried out. 
+In this project an aerodynamic study of the CRM in transonic flow will be carried out. 
 For this purpose, a brief development of the numerical methods used and an unstructured mesh 
 for the model to be studied, both in 2D and 3D, will be carried out.
 
