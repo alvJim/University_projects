@@ -1,0 +1,13 @@
+El nombre del archivo lleva el prefijo AA con la finalidad de que aparezca al principio de la carpeta.
+
+En esta carpeta se han realizado distintas simulaciones para la mitad del avión en 3D del 
+Common Research Model de la NASA, más conocido por sus siglas en inglés CRM.
+
+La simulación se ha realizado para flujo no viscoso.
+Dentro de la carpeta se puede encontrar diferentes postfijos para los archivos, siendo estos:
+
+-> FP: full plane
+-> V3: versión 3, ya que hicieron falta varias versiones hasta encontrar la solución.
+
+
+
