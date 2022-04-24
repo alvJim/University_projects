@@ -1,0 +1,37 @@
+El nombre del archivo lleva el prefijo AA con la finalidad de que aparezca al principio de la carpeta.
+
+En esta carpeta se han realizado distintas simulaciones para el perfil del 
+Common Research Model de la NASA, más conocido por sus siglas en inglés CRM.
+El perfil pertenece al 65% del semiala (siendo 0% el fuselaje y 100% la punta del semiala).
+
+Las simulaciones realizadas han sido para flujo no viscoso.
+Dentro de la carpeta se puede encontrar diferentes postfijos para los archivos, siendo estos:
+
+---------Postfijos referidos al mallado:------------------------------------------------------------------------------------------
+
+-> S1: Tamaño del dominio de 10 puntos.
+-> S2: Tamaño del dominio de 40 puntos.
+-> S3: Tamaño del dominio de 160 puntos.
+-> S4: Tamaño del dominio de 640 puntos.
+
+->N1: 48 puntos sobre el perfil y 30 sobre el dominio.
+->N2: 96 puntos sobre el perfil y 60 sobre el dominio.
+->N3: 192 puntos sobre el perfil y 120 sobre el dominio.
+->N4: 384 puntos sobre el perfil y 240 sobre el dominio.
+
+->Y0= wall spacing de 7.8e-6
+->Y2= wall spacing de 4.5e-6
+
+----------Postfijos referidos a la experimentación-------------------------------------------------------------------------
+
+AOADIS: Ángulo de ataque de diseño (AOADIS: 1.86445)
+AOA1: Ángulo de ataque de 1 grado.
+AOA14: Ángulo de ataque de 1.4 grado.
+AOA24: Ángulo de ataque de 2.4 grado.
+y así sucesivamente.
+
+M_04: Número de Mach de 0.4
+M_05: Número de Mach de 0.5
+M_06: Número de Mach de 0.6
+y así sucesivamente.
+
